@@ -1,0 +1,15 @@
+/* 版心设置 */
+.container {
+    width: 1190px;
+    margin: 0 auto;
+}
+ 
+/* #region顶部导航条start */
+.topbar{
+    height: 30px;
+    background-color: #ECECEC;
+}
+
+
+ 
+/* #endregion顶部导航条end */
