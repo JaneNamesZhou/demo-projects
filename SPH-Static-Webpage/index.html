@@ -7,30 +7,33 @@
         <!-- 引入网页图标 -->
         <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
         <!-- 引入默认样式重置文件 -->
-        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="./css/reset.css" />
         <!-- 引入自定义样式文件 -->
-        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="./css/index.css" />
 
     </head>
     <body>
         <!-- 顶部导航条 -->
         <div class="topbar">
-            <div class="container">
+            <!-- 版心 清除浮动-->
+            <div class="container clearfix">
+                <!-- 左边欢迎区 往左飘-->
                 <div class="welcome leftfix">
-                    <span>尚品汇欢迎您</span>
+                    <span class="hello">尚品汇欢迎您</span>
                     <span>请</span>
-                    <a href="#">登录</a>
-                    <a href="#">免费注册</a>
+                    <a href="#" class="login">登录</a>
+                    <a href="#" class="register">免费注册</a>
                 </div>
+                <!-- 右边导航区 往右飘-->
                 <div class="topbar-nav rightfix">
-                    <ul>
-                        <li><a href="#">我的订单</a><span>|</span></li>
-                        <li><a href="#">我的购物车</a><span>|</span></li>
-                        <li><a href="#">我的尚品汇</a><span>|</span></li>
-                        <li><a href="#">尚品汇会员</a><span>|</span></li>
-                        <li><a href="#">企业采购</a><span>|</span></li>
-                        <li><a href="#">关注尚品汇</a><span>|</span></li>
-                        <li><a href="#">合作招商</a><span>|</span></li>
+                    <ul class="list">
+                        <li><a href="#">我的订单</a></li>
+                        <li><a href="#">我的购物车</a></li>
+                        <li><a href="#">我的尚品汇</a></li>
+                        <li><a href="#">尚品汇会员</a></li>
+                        <li><a href="#">企业采购</a></li>
+                        <li><a href="#">关注尚品汇</a></li>
+                        <li><a href="#">合作招商</a></li>
                         <li><a href="#">商家后台</a></li>
                     </ul>
                 </div>

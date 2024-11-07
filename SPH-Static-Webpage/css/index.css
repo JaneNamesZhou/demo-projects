@@ -1,0 +1,69 @@
+/* 版心设置 多处使用*/
+.container {
+    width: 1190px;
+    /* 不需要高度：内容动态变化，自动扩展*/
+    /*居中*/
+    margin: 0 auto;
+
+}
+
+/* #region顶部导航条start */
+.topbar {
+    /* 不需要宽度，撑满整个屏幕 */
+    height: 30px;
+    background-color: #ECECEC;
+}
+
+/* 左边欢迎区 */
+.welcome {
+    height: 30px;
+    line-height: 30px;
+    /* 消除行间距 */
+    font-size: 0;
+    /* 文字颜色 */
+    color: #666
+}
+
+.welcome span,
+.welcome a {
+    font-size: 12px;
+}
+
+.welcome .hello {
+    margin-right: 28px;
+}
+
+.welcome .login {
+    padding-right: 10px;
+    border-right: 1px solid #666;
+}
+
+.welcome .register {
+    padding-left: 10px
+}
+
+/* 右边导航区 */
+.topbar-nav .list {
+    height: 30px;
+    line-height: 30px;
+}
+
+.topbar-nav .list li {
+    float: left;
+}
+
+.topbar-nav .list li a {
+    padding: 0 15px;
+    border-right: 1px solid #666;
+}
+
+.topbar-nav .list li:first-child a {
+    padding-left: 0;
+}
+
+.topbar-nav .list li:last-child a {
+    padding-right: 0;
+    border: 0;
+}
+
+/* #endregion顶部导航条end */
