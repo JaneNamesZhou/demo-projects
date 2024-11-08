@@ -67,3 +67,36 @@
 }
 
 /* #endregion顶部导航条end */
+
+/* #region头部start */
+
+.header {
+    background-color: aquamarine;
+}
+
+.header .search{
+    font-size: 0;
+    margin-top: 42px;
+}
+
+.header input{
+    width: 508px;
+    height: 34px;
+    border: 1px solid  #DD302D;
+}
+
+.search button {
+    width: 80px;
+    height: 36px;
+    background-color: #DD302D;
+    vertical-align: top;
+    background-image: url('../images/search_icon.png');
+    background-repeat: no-repeat;
+    background-position: 28px 6px;
+} 
+
+/* #endregion头部end */
+
+
+/* #region start */
+/* #endregion end */
