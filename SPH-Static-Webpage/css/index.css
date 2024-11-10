@@ -238,25 +238,87 @@
     line-height: 26px;
 }
 
-
-.other-slide .msg-nav {
+.msg-nav {
     margin-top: 10px;
     height: 290px;
     width: 290px;
-    background-color: orange;
+    /* 塌陷 */
+    overflow: hidden;
 }
 
+.msg-nav .msg-nav-list:first-child {
+    margin-top: 16px;
+}
 
+.msg-nav .msg-nav-list{
+    margin-bottom: 16px;
+}
 
+.msg-nav .msg-nav-list li {
+    width: 48px;
+    height: 71px;
+    float: left;
+    margin: 0 11px;
+    text-align: center;
+}
 
+.msg-nav .msg-nav-list li .picture {
+    width: 48px;
+    height: 48px;
+    /* color: #DD302D; */
+    background-image: url('../images/精灵图-侧边功能.png');
+}
+.msg-nav .msg-nav-list li:first-child {
+    margin-left: 16px;
+}
 
+.msg-nav .msg-nav-list:nth-child(1) li:nth-child(1) .picture {
+    background-position: 0px 0px;
+}
 
+.msg-nav .msg-nav-list:nth-child(1) li:nth-child(2)  .picture {
+    background-position: -48px 0px;
+}
 
+.msg-nav .msg-nav-list:nth-child(1) li:nth-child(3)  .picture {
+    background-position: -96px 0px;
+}
 
+.msg-nav .msg-nav-list:nth-child(1) li:nth-child(4)  .picture {
+    background-position: -144px 0px;
+}
 
+.msg-nav .msg-nav-list:nth-child(2) li:nth-child(1) .picture {
+    background-position: 0px -48px;
+}
 
+.msg-nav .msg-nav-list:nth-child(2) li:nth-child(2)  .picture {
+    background-position: -48px -48px;
+}
 
+.msg-nav .msg-nav-list:nth-child(2) li:nth-child(3)  .picture {
+    background-position: -96px -48px;
+}
 
+.msg-nav .msg-nav-list:nth-child(2) li:nth-child(4)  .picture {
+    background-position: -144px -48px;
+}
+
+.msg-nav .msg-nav-list:nth-child(3) li:nth-child(1) .picture {
+    background-position: 0px -96px;
+}
+
+.msg-nav .msg-nav-list:nth-child(3) li:nth-child(2)  .picture {
+    background-position: -48px -96px;
+}
+
+.msg-nav .msg-nav-list:nth-child(3) li:nth-child(3)  .picture {
+    background-position: -96px -96px;
+}
+
+.msg-nav .msg-nav-list:nth-child(3) li:nth-child(4)  .picture {
+    background-position: -144px -96px;
+}
 
 /* #endregion 主内容 end */
 
