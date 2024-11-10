@@ -127,5 +127,61 @@
 
 /* #endregion 主导航区 end */
 
+/* #region 主内容 start */
+.main-content {
+    margin-top: 10px;
+}
+
+.main-content .slide {
+    height: 458px;
+    width: 190px;
+}
+
+.main-content .slide li {
+    padding-left: 16px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.main-content .slide li:hover {
+    background-color: #DD302D;
+}
+
+.main-content .slide li:hover a {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-content .banner {
+    height: 458px;
+    width: 690px;
+    background-color: #666;
+    margin: 0 10px;
+}
+
+.main-content .other-slide {
+    height: 458px;
+    width: 290px;
+    background-color: orange;
+}
+
+/* #endregion 主内容 end */
+
 /* #region start */
 /* #endregion end */
