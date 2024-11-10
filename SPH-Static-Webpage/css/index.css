@@ -197,22 +197,6 @@
     border-left: 1px solid #666;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .main-content .banner {
     height: 458px;
     width: 690px;
@@ -223,8 +207,56 @@
 .main-content .other-slide {
     height: 458px;
     width: 290px;
+}
+
+.other-slide .message {
+    height: 156px;
+    width: 260px;
+    /* padding影响盒子大小 */
+    padding: 0 14px;
+    border: 1px solid #666;
+}
+
+.other-slide .msg-title {
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #666;
+}
+
+.other-slide .msg-title span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.other-slide .msg-title a {
+    font-size: 12px;
+}
+
+.other-slide li {
+    height: 26px;
+    width: 290px;
+    line-height: 26px;
+}
+
+
+.other-slide .msg-nav {
+    margin-top: 10px;
+    height: 290px;
+    width: 290px;
     background-color: orange;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* #endregion 主内容 end */
 
