@@ -322,5 +322,42 @@
 
 /* #endregion 主内容 end */
 
+/* #region 秒杀 start */
+.seckill{
+    height: 190px;
+    /* background-color: #DD302D; */
+}
+
+.seckill img {
+    float: left; 
+    padding-top: 10px;
+    margin-right: 11px;
+}
+
+.seckill img:last-child {
+    margin-right: 0;
+}
+
+/* #endregion 秒杀 end */
+
+/* #region 楼层区 start */
+ 
+.floor .floor-header{
+    padding-top: 48px;
+}
+
+.floor span{
+    height: 30px;
+    line-height: 30px;
+}
+
+.floor li {
+    float: left;
+    height: 24px;
+    line-height: 24px;
+}
+
+/* #endregion 楼层区 end */
+
 /* #region start */
 /* #endregion end */
