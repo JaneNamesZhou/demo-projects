@@ -250,7 +250,7 @@
     margin-top: 16px;
 }
 
-.msg-nav .msg-nav-list{
+.msg-nav .msg-nav-list {
     margin-bottom: 16px;
 }
 
@@ -268,6 +268,7 @@
     /* color: #DD302D; */
     background-image: url('../images/精灵图-侧边功能.png');
 }
+
 .msg-nav .msg-nav-list li:first-child {
     margin-left: 16px;
 }
@@ -276,15 +277,15 @@
     background-position: 0px 0px;
 }
 
-.msg-nav .msg-nav-list:nth-child(1) li:nth-child(2)  .picture {
+.msg-nav .msg-nav-list:nth-child(1) li:nth-child(2) .picture {
     background-position: -48px 0px;
 }
 
-.msg-nav .msg-nav-list:nth-child(1) li:nth-child(3)  .picture {
+.msg-nav .msg-nav-list:nth-child(1) li:nth-child(3) .picture {
     background-position: -96px 0px;
 }
 
-.msg-nav .msg-nav-list:nth-child(1) li:nth-child(4)  .picture {
+.msg-nav .msg-nav-list:nth-child(1) li:nth-child(4) .picture {
     background-position: -144px 0px;
 }
 
@@ -292,15 +293,15 @@
     background-position: 0px -48px;
 }
 
-.msg-nav .msg-nav-list:nth-child(2) li:nth-child(2)  .picture {
+.msg-nav .msg-nav-list:nth-child(2) li:nth-child(2) .picture {
     background-position: -48px -48px;
 }
 
-.msg-nav .msg-nav-list:nth-child(2) li:nth-child(3)  .picture {
+.msg-nav .msg-nav-list:nth-child(2) li:nth-child(3) .picture {
     background-position: -96px -48px;
 }
 
-.msg-nav .msg-nav-list:nth-child(2) li:nth-child(4)  .picture {
+.msg-nav .msg-nav-list:nth-child(2) li:nth-child(4) .picture {
     background-position: -144px -48px;
 }
 
@@ -308,28 +309,28 @@
     background-position: 0px -96px;
 }
 
-.msg-nav .msg-nav-list:nth-child(3) li:nth-child(2)  .picture {
+.msg-nav .msg-nav-list:nth-child(3) li:nth-child(2) .picture {
     background-position: -48px -96px;
 }
 
-.msg-nav .msg-nav-list:nth-child(3) li:nth-child(3)  .picture {
+.msg-nav .msg-nav-list:nth-child(3) li:nth-child(3) .picture {
     background-position: -96px -96px;
 }
 
-.msg-nav .msg-nav-list:nth-child(3) li:nth-child(4)  .picture {
+.msg-nav .msg-nav-list:nth-child(3) li:nth-child(4) .picture {
     background-position: -144px -96px;
 }
 
 /* #endregion 主内容 end */
 
 /* #region 秒杀 start */
-.seckill{
+.seckill {
     height: 190px;
     /* background-color: #DD302D; */
 }
 
 .seckill img {
-    float: left; 
+    float: left;
     padding-top: 10px;
     margin-right: 11px;
 }
@@ -341,23 +342,108 @@
 /* #endregion 秒杀 end */
 
 /* #region 楼层区 start */
- 
-.floor .floor-header{
-    padding-top: 48px;
+
+.floor .floor-header {
+    height: 30px;
+    margin-top: 48px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #DD302D;
 }
 
-.floor span{
+.floor .floor-header span {
     height: 30px;
     line-height: 30px;
+    font-size: 20px;
 }
 
-.floor li {
+.floor .floor-header li {
     float: left;
     height: 24px;
     line-height: 24px;
+    font-size: 16px;
+    padding: 0 10px;
+    border-right: 1px solid #666;
+}
+
+.floor .floor-header li:last-child {
+    border: 0;
+}
+
+
+.floor-body .item {
+    height: 432px;
+    float: left
+}
+
+.floor-body .item1 {
+    width: 190px;
+    height: 392px;
+    background-color: #F4F4F4;
+    /* padding影响盒子大小 */
+    padding: 20px
+}
+
+.item1-list li {
+    width: 90px;
+    height: 20px;
+    float: left;
+    padding-bottom: 3.5px;
+    border-bottom: 1px solid #E2E2E2;
+    font-size: 16px;
+    text-align: center;
+}
+
+.item1-list li:nth-child(2n-1) {
+    float: left;
+}
+
+.item1-list li:nth-child(2n) {
+    float: right;
+}
+
+.item1-list li:nth-child(3),
+.item1-list li:nth-child(4) {
+    margin: 14.4px 0;
+}
+
+.item1 img {
+    margin-top: 30px;
+}
+
+.floor-body .item2 {
+    width: 340px;
+
+}
+
+.floor-body .item3 {
+    width: 206px;
+    border-right: 1px solid #E2E2E2;
+
+}
+
+.floor-body .item3 img ,
+.floor-body .item4 img ,
+.floor-body .item5 img {
+    border-bottom: 1px solid #E2E2E2;
+}
+
+
+.floor-body .item4 {
+    width: 206px;
+    border-right: 1px solid #E2E2E2;
+}
+
+.floor-body .item5 {
+    width: 206px;
 }
 
 /* #endregion 楼层区 end */
 
-/* #region start */
-/* #endregion end */
+/* #region 页脚 start */
+.footer {
+    width: 1920px;
+    height: 440px;
+    background-color: orange;
+}
+
+/* #endregion 页脚 end */
