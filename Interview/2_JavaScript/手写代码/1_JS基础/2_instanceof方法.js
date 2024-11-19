@@ -1,3 +1,4 @@
+
 // 实现instanceof
 function myInstanceof(obj, constructor) {
     if (typeof obj !== 'object' || obj === null) {
