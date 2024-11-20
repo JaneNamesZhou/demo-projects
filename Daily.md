@@ -33,14 +33,20 @@
 
 ## 2024-11-20（周三）
 ### 学习内容
-- HTML 文档结构
-  - DOCTYPE
-  - html
-  - head
-  - body
-- (文本) abbr、address、sup、sub
-- (表格) table、thead、tbody、tfoot、tr、th、td、caption、rowspan、colspan、scope、rowgroup
-- (表单) text、number、range、checkbox、radio、select、textarea、button、submit、tel
+- HTML 
+  - 文档结构
+    - DOCTYPE
+    - html
+    - head
+    - body
+  - (文本) abbr、address、sup、sub
+  - (表格) table、thead、tbody、tfoot、tr、th、td、caption、rowspan、colspan、scope、rowgroup
+  - (表单) text、number、range、checkbox、radio、select、textarea、button、submit、tel
+- JS
+  - 数据类型
+  - 函数
+  - 语句
+  - 字符串
 
 ### 作业
 - 完成 【入门】HTML 
@@ -48,4 +54,4 @@
   - 语法 1-5 
 
 ### 总结
-- 今天学习了HTML和JS基础， tomorrow 继续学习（还是得动手啊）
+- 今天学习了HTML和JS基础语法， tomorrow 继续学习（还是得动手啊）
