@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>美食营养表</title>
+        <style>
+           table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>餐食营养数据</caption>
+            说明
+            餐食的一些数据。（资料取自cupcakes kale chips，图片取自cupcakes kale chips照片库。）
+            <tr>
+                <td rowspan="2"></td>
+                <td rowspan="2"></td>
+                <td rowspan="2">名字</td>
+                <td rowspan="2">图片</td>
+                <td rowspan="2">Calories</td>
+                <td colspan="4">fat(g)</td>
+                <td rowspan="2">Cholesterol (mg)</td>
+                <td rowspan="2">Sodium (mg)</td>
+                <td rowspan="2">Vitamin A (IU)</td>
+            </tr>
+            <tr>
+                <td>Saturated</td>
+                <td>Trans</td>
+                <td>Polyunsaturated</td>
+                <td>Monounsaturated</td>
+            </tr>
+            <tr>
+                <td rowspan="4">breakfast</td>
+                <td rowspan="2">Trans</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+        </table>
+
+        <h1>复杂表格示例</h1>
+
+        <table>
+            <caption>项目进度和负责人信息</caption>
+            <thead>
+                <tr>
+                    <th scope="col" rowspan="2">项目名称</th>
+                    <th scope="colgroup" colspan="2">进度</th>
+                    <th scope="colgroup" colspan="2">负责人</th>
+                    <th scope="col" rowspan="2">开始日期</th>
+                    <th scope="col" rowspan="2">预计完成日期</th>
+                </tr>
+                <tr>
+                    <th scope="col">当前阶段</th>
+                    <th scope="col">完成百分比</th>
+                    <th scope="col">姓名</th>
+                    <th scope="col">联系方式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="rowgroup" rowspan="2">项目A</th>
+                    <td>设计阶段</td>
+                    <td>30%</td>
+                    <td>张三</td>
+                    <td>123-456-7890</td>
+                    <td rowspan="2">2023-01-01</td>
+                    <td rowspan="2">2023-12-31</td>
+                </tr>
+                <tr>
+                    <td>设计阶段</td>
+                    <td>30%</td>
+                    <td>李四</td>
+                    <td>123-456-7891</td>
+                </tr>
+                <tr>
+                    <th scope="row">项目B</th>
+                    <td>开发阶段</td>
+                    <td>60%</td>
+                    <td>王五</td>
+                    <td>123-456-7892</td>
+                    <td>2023-02-01</td>
+                    <td>2024-01-31</td>
+                </tr>
+                <tr>
+                    <th scope="row">项目C</th>
+                    <td>测试阶段</td>
+                    <td>80%</td>
+                    <td>赵六</td>
+                    <td>123-456-7893</td>
+                    <td>2023-03-01</td>
+                    <td>2024-02-28</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
