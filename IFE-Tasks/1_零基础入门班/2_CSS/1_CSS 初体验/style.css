@@ -1,0 +1,85 @@
+/* 所有元素居中 */
+body {
+    text-align: center;
+}
+
+/* 类名为 card 的 div
+添加你喜欢的字体类型,字体居中显示
+宽度为500px
+内边距50px，外边距50px
+设置背景颜色为#fff
+添加一个边框，颜色为#ddd */
+.card {
+    font: "Yahei";
+    width: 500px;
+    padding: 50px;
+    margin: 50px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+/* 图片 设置图片宽度和高度为100px  */
+img {
+    width: 100px;
+    height: 100px;
+}
+
+/* 一级标题 字体大小为30px,
+字体粗细为300 行距32px,
+内边距15px  */
+h1 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 32px;
+    padding: 15px;
+}
+
+/* 二级标题 文字大小变成18px,
+字体粗细300,
+字体颜色#aaa 行高为16px,
+内边距5px  */
+h2 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #aaa;
+    line-height: 16px;
+    padding: 5px;
+}
+
+/* 分割线 宽度200px,
+外边距30px,
+添加1px粗边框，颜色为#ddd 居中 */
+hr {
+    width: 200px;
+    margin: 30px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* 段落 字体粗细500,
+行高32px  */
+p {
+    font-weight: 500;
+    line-height: 32px;
+}
+
+/* 列表 字体粗细500,
+行高28px 给每一个li添加1px边框 颜色为#eee,
+内边距为5px; */
+ul li {
+    font-weight: 500;
+    line-height: 28px;
+    border: 1px solid #eee;
+    padding: 5px;
+}
+
+
+/* 超链接 字体颜色为#aaa  */
+a {
+    color: #aaa;
+}
+
+/* 鼠标悬停时，字体颜色为#f00 */
+a:hover {
+    color: #f00;
+}

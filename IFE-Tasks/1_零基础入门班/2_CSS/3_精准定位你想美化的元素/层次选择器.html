@@ -1,0 +1,64 @@
+
+
+<!-- 文档类型声明 -->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title>边框</title>
+        <style type="text/css">
+            /* 选中第一层列表，添加外边框 */
+            ul>li {
+                border: 1px solid #000;
+              }
+            /* 选中第二层列表，设置背景颜色为#eee
+             */
+            ul>li>ol>li {
+                background-color: #eee;
+              }
+            /* 选中第三层列表,添加虚线外边框
+             */
+             ul>li>ol>li>ol>li {
+                border-bottom: 1px dashed #000; 
+              }
+            /* 选中每一个列表的第一个列表项目设置字体为粗体,添加下边框，添加背景颜色为黑色，字体颜色为白色
+             */
+             ul li:first-child {
+                font-weight: bold;
+                border-bottom: 1px solid #000;
+                background-color: #000;
+                color: #fff;
+              }
+            /* 选中第三层列表，给最后一个列表项 li，设置字体为斜体，字体为白色，添加背景颜色为黑色。 */ 
+            ul>li>ol>li>ol>li:last-child {
+                font-style: italic;
+                color: #fff;
+                background-color: #000;
+              }
+              
+        </style>
+        <!-- <script src="scripts.js"></script> -->
+    </head>
+    <body>
+        <ul>
+            <li>
+                第一层列表第一项
+                <ol>
+                    <li>第二层列表第一项</li>
+                    <li>第二层列表第二项</li>
+                    <li>
+                        第二层列表第三项
+                        <ol>
+                            <li>第三层列表第一项</li>
+                            <li>第三层列表第二项</li>
+                            <li>第三层列表第三项</li>
+                        </ol>
+                    </li>
+                    <li>第二层列表第四项</li>
+                </ol>
+            </li>
+            <li>第一层列表第二项</li>
+            <li>第一层列表第三项</li>
+        </ul>
+    </body>
+</html>

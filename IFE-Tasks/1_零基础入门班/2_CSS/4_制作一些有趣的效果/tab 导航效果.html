@@ -1,0 +1,33 @@
+
+
+<!-- 文档类型声明 -->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title>边框</title>
+        <style type="text/css"> 
+        div .tab {
+            width: 100px;
+            height: 30px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            color: blue;
+        }
+
+        /* 点击 TAB，对应 TAB，字体颜色由蓝色变成灰色,并且底部边框消失。 */
+        .tab:active{
+        color: grey;
+        border-bottom: none;
+        }
+        </style>
+        <!-- <script src="scripts.js"></script> -->
+    </head>
+    <body>
+        <div class="tabs">
+            <div class="tab">Tab 1</div>
+            <div class="tab">Tab 2</div>
+            <div class="tab">Tab 3</div>
+        </div>
+    </body>
+</html>
