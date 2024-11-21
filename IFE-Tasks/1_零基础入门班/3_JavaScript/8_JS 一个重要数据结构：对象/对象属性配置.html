@@ -1,0 +1,44 @@
+
+
+<!-- 文档类型声明 -->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title>对象属性配置</title>
+        <style type="text/css"> 
+        </style>
+        <script>
+            let person = {            }
+             // 使用 Object.defineProperty 监听 person.name 的变化
+            Object.defineProperty(person, 'name', {
+                get: function () {
+                    console.log('getter');
+                    return this._name;
+
+                },
+                set: function (newName) {
+                    console.log('setter');
+                    document.querySelector('.name').value = newName;
+                    this._name = newName;
+                },
+            });
+//             当改变姓名输入框的值敲击回车，console 打印 person.name 的值与姓名输入框的值一致
+// 当在调试环境代码行输入 person.name = amber,姓名输入框的值自动变成 amber ，如下图所示
+// 点击恢复姓名为rose按钮，修改 person.name 的值为 rose (不要直接修改姓名输入框的值)，输入框的值自动变成 rose。
+            function changeName(){ 
+               person.name =event.target.value;
+               console.log(person.name);
+            }
+            function changeInput(){
+                 person.name ='rose';
+                console.log(person.name);
+            }
+        </script>
+    </head>
+    <body>
+        <label>姓名:</label><input type="text" class="name"
+            onchange="changeName()" />
+        <button onclick="changeInput()">恢复姓名为rose</button>
+    </body>
+</html>

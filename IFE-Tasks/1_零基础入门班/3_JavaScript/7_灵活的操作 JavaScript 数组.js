@@ -71,6 +71,7 @@ function getTotalScore(scores) {
  */
 function getAverageScore(scores) {
     // your code here
+    return getTotalScore(scores) / scores.length;
 }
 
 /**
@@ -80,6 +81,9 @@ function getAverageScore(scores) {
  */
 function getFailScores(scores) {
     // your code here
+    return scores.filter(function (score) {
+        return parseInt(score) < 60;
+    });
 }
 
 /**
@@ -89,6 +93,14 @@ function getFailScores(scores) {
  */
 function getAddFiveScores(scores) {
     // your code here
+    return scores.map(function (score) {
+        let newScore = parseInt(score) + 5;
+        if (newScore > 100) {
+            return 100;
+        } else {
+            return newScore;
+        }
+    });
 }
 
 /**
@@ -98,6 +110,11 @@ function getAddFiveScores(scores) {
  */
 function getPrize(scores) {
     // your code here
+    return scores.filter(function (score) {
+        return parseInt(score) > 90;
+    }).reduce((previous, current) => {
+        return parseInt(previous) + parseInt(current) * 100;
+    }, 0);
 }
 
 console.log(getTotalScore(scores));
@@ -105,3 +122,70 @@ console.log(getAverageScore(scores));
 console.log(getFailScores(scores));
 console.log(getAddFiveScores(scores));
 console.log(getPrize(scores));
+
+console.log('-----任务二: 功能函数-----');
+
+// 实现两个数组拼接,返回一个新数组
+function arrJoin(arr1, arr2) {
+    // your implement
+    return arr1.concat(arr2);
+}
+//测试用例
+let arr = ['a', 'ab', 'a'];
+let arr1 = ['1', '2', '3'];
+let arr2 = ['3', '6', '1']
+console.log(arrJoin(arr1, arr2)); //-> ['1','2','3','3','6','1']
+
+// 利用reduce()实现两个数组归并
+function arrMerge(arr1, arr2) {
+    // your implement
+    return arr1.reduce((previous, current) => {
+        if (arr2.includes(current)) {
+            return previous;
+        }
+        previous.push(current);
+        return previous;
+    }, arr2);
+
+}
+
+
+console.log(arrMerge(arr1, arr2)); //-> ['1','2','3','6']
+
+// 封装数组去重函数,去除数组中重复的元素,
+function norepeat() {
+    // your implement
+    return arr.reduce((previous, current) => {
+        if (previous.includes(current)) {
+            return previous;
+        }
+        previous.push(current);
+        return previous;
+    }, []);
+}
+
+//测试用例 
+console.log(norepeat(arr)); //-> ['a','ab']
+
+// 实现方法检测数组是否包含特定值
+function inArray(arr, value) {
+    //your implement
+    return arr.includes(value);
+}
+
+
+console.log(inArray(arr, 'b')); // -> false
+console.log(inArray(arr, 'a')); //->true 
+
+// 实现多维数组变为一维数组
+function matrixElements(arr) {
+    //your implement 
+    // return arr.reduce((previous, current) => {
+    //     return previous.concat(current);
+    // }, []);
+    return arr.flat(Infinity)
+}
+
+//测试用例
+let rows = [[2, 3, 5], [1, 2, 4], [8, 5, 5]]
+console.log(matrixElements(rows)) //[2,3,5,1,2,4,8,5,5]

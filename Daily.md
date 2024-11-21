@@ -25,11 +25,9 @@
 - CSS
   - 边框、文本、选择器（层次、伪类、属性）、圆角
 - JS
-### 作业
-- 完成 【入门】 CSS
-- 完成 【入门】 JS 
-  - DOM 10-15 
-
+  - 7 数组操作 filter、map、reduce、find、flat 
+  - 8 对象 Object.defineProperty、Object.assign、Object.keys、Object.values、Object.entries、Object.create
+  - 9 可选链 ?. & 空值合并 ??
 ### 总结
 -  一步一个脚印！
 
