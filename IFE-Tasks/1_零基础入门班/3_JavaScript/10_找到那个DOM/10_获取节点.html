@@ -1,0 +1,92 @@
+
+
+<!-- 文档类型声明 -->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title> </title>
+        <style type="text/css"> 
+        </style>
+        <!-- <script src="scripts.js"></script> -->
+    </head>
+
+    <body>
+        <div id="grandParent">grandParent
+            <div id="father">father
+                <div id="sibling1">Sibling 2</div>
+                <div id="target" onclick=getSon()>Target Element
+                    <div id="son1">Son1 Element</div>
+                    <div id="son2">Son2 Element</div>
+                </div>
+                <div id="sibling2">Sibling 2</div>
+            </div>
+            <div id="uncle">uncle</div>
+        </div>
+
+        <script>
+            // 获取当前element元素所有的兄弟节点
+            function getSiblings(element){
+                // your implement
+                
+            }
+
+            // 获取当前element元素前一个兄弟节点
+            function getPrev(element){
+                // your implement
+
+            }
+
+            // 获取element元素之前所有的兄弟节点
+            function getPrevaAll(element){
+                // your implement
+            }
+
+            // 获取element元素之后第一个兄弟节点
+            function getNext(element){
+                // your implement
+            }
+
+            // 获取element元素之后所有的兄弟节点
+            function getNextAll(element){
+                // your implement
+            }
+
+            // 获取元素的所有子节点
+            function getSon(element){
+            // your implement
+                console.log(element.childNodes);
+
+
+            }
+            //获取元素的第一个子节点
+            function getFirstSon(element){
+
+            // your implement
+            }
+            /**
+             * @descriotion 获取element的符号 parent_css_selector 的父元素
+             * @param {object} element
+             * @param {String} parent_css_selector 父元素的 css 选择器
+             */
+            function getParent( element,parent_css_selector){
+            // your implement
+            }
+            // 判断element的节点类型，并且返回
+            function getNodeType(element) {
+                // your implement
+            }
+
+            // 获取element元素完整的HTML内容
+            function getHTMLContent(element) {
+                // your implement
+            }
+            // 获取element元素的文本内容
+            function getText(element) {
+                // your implement
+                return element.innerText;
+            }
+
+        </script>
+    </body>
+</html>
