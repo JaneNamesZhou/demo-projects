@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>伪造Ajax</title>
+    <script type="text/javascript" src="jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function fn() {
+            // 获取文本框中的内容
+            $("txtName").val;
+            // 发送给服务器
+            $.ajax({
+                url: "http://localhost:8080/ajax/checkName",
+                type: "post",
+                data: "name=" + $("txtName").val(),
+                dataType: "text",
+                success: function (data) {
+                    alert(data);
+                }
+            })
+            // 接收服务器的响应
+        }
+
+
+
+    </script>
+
+    <div>
+        <input type="text" id="txtName" onblur="fn()">
+
+    </div>
+</body>
+
+</html>

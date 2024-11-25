@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    </meta>
+    <script src="./promise.js"></script>
+</head>
+
+<body>
+    <script>
+        // 成功
+        let p1 = new Promise(function (resolve, reject) {
+            resolve('成功');
+        });
+
+        p1.then(value => {
+            console.log('then1:' + value);
+        }, reason => {
+            console.log(reason);
+        });
+
+        p1.then(value => {
+            console.log('then1:' + value);
+        }, reason => {
+            console.log(reason);
+        });
+
+        // 失败
+        let p2 = new Promise(function (resolve, reject) {
+            reject('失败');
+        });
+
+        p2.then(value => {
+            console.log('then2:' + value);
+        }, reason => {
+            console.log('then2:' + reason);
+        });
+
+        // 异步
+        let p3 = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                resolve('成功');
+            }, 2000);
+        });
+
+        p3.then(value => {
+            console.log('then3:' + value);
+        }, reason => {
+            console.log('then3:' + reason);
+        });
+
+        // throw
+        let p4 = new Promise(function (resolve, reject) {
+            throw '出错';
+        });
+
+        p4.then(value => {
+            console.log('then4:' + value);
+        }, reason => {
+            console.log('then4:' + reason);
+        });
+
+
+        // then 结果
+        let p5 = new Promise(function (resolve, reject) {
+            throw '出错';
+        });
+
+        let r = p5.then(value => {
+            throw '出错2';
+        }, reason => {
+            console.log('then4:' + reason);
+        });
+
+        p5.catch(e => {
+            console.log('catch:' + e);
+        });
+        console.log(r);
+
+    </script>
+</body>
+
+</html>
