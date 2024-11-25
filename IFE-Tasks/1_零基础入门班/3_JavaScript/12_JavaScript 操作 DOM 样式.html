@@ -1,0 +1,43 @@
+
+
+<!-- 文档类型声明 -->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title> </title>
+        <style type="text/css"> 
+        </style>
+        <!-- <script src="scripts.js"></script> -->
+    </head>
+    <body>
+        <script>
+            // 为element增加一个样式名为newClassName的新样式
+            function addClass(element, newClassName) {
+            // your implement
+            element.className += ' ' + newClassName;
+            }
+
+            // 移除element中的样式oldClassName
+            function removeClass(element, oldClassName) {
+            // your implement
+            element.className = element.className.replace(oldClassName, '');
+            }
+
+            // 判断element类名是否含有 className
+            function hasClass(element, className) {
+            // your implement
+            return element.className.indexOf(className) !== -1;
+            }
+
+            // 判断 element类名是否含有 oldClassName,如果存在，就把它替换成newClassName。如果不存在，就不做任何操作
+            function replaceClass(element, oldClassName,newClassName) {
+            // your implement
+            if (hasClass(element, oldClassName)) {
+                removeClass(element, oldClassName);
+                addClass(element, newClassName);
+            }
+            }
+        </script>
+    </body>
+</html>

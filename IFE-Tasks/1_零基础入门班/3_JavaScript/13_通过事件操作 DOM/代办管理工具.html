@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <title>Todo List</title>
+    <style type="text/css"> 
+        .done {
+            text-decoration: line-through;
+        }
+        .todo {
+            color: #000;
+            width: 100%;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <form id="form">
+        <input type="text" id="input" placeholder="Enter your todo" autocomplete="off">
+        <ul class="todos" id="todos"></ul>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const taskInput = document.getElementById('input');
+            const todosList = document.getElementById('todos');
+
+            taskInput.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault(); // 阻止表单默认提交行为
+                    const taskText = taskInput.value.trim();
+                    if (taskText) {
+                        // 创建新的 li 元素
+                        const newTask = document.createElement('li');
+                        newTask.textContent = taskText;
+                        newTask.classList.add('todo'); // 添加样式类
+                        // 为新任务添加双击事件监听器
+                        newTask.addEventListener('click', function() {
+                                                    this.classList.toggle('done');
+                                                });
+
+                        // 将新的 li 元素添加到 ul 中
+                        todosList.appendChild(newTask);
+
+                        // 清空输入框
+                        taskInput.value = '';
+                    } else {
+                        alert('请输入任务内容');
+                    }
+                }
+            });
+
+            // todosList.addEventListener('click', function(event) {
+            //     if (event.target.tagName === 'LI') {
+            //         event.target.classList.toggle('done');
+            //     }
+            // });
+        });
+    </script>
+</body>
+</html>

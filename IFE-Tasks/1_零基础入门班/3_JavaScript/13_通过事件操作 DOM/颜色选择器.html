@@ -1,0 +1,44 @@
+
+
+<!-- 文档类型声明 -->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title> </title>
+        <style type="text/css"> 
+        .container{
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border: 1px solid black;
+        }
+        </style>
+        <!-- <script src="scripts.js"></script> -->
+    </head>
+    <body>
+        <div class="container">
+
+        </div>
+        <div id="rgb-display">Hover over a color to see its RGB value.</div>
+        <div class="color">
+
+        </div>
+        <script>  
+            for(let i = 0; i <= 255; i+=32){
+                for(let j = 0; j <= 255; j+=32){
+                    for (let k = 0; k <= 255; k+=32){
+                        const div = document.createElement('div');
+                        div.style.backgroundColor = `rgb(${i},${j},${k})`;
+                        div.style.width = '20px';
+                        div.style.height = '20px';
+                        div.addEventListener('mouseover', function(){
+                            document.querySelector('#rgb-display').innerText = `RGB(${i},${j},${k})`;
+                        })
+                        document.querySelector('.color').appendChild(div);
+                    } 
+                 }
+            }
+        </script>
+    </body>
+</html>

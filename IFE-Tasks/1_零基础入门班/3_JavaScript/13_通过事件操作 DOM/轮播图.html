@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <title>轮播图示例</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .carousel-container {
+            position: relative;
+            width: 800px;
+            height: 400px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+        }
+        .carousel-dots span {
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .carousel-dots span.active {
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel-images" id="carouselImages">
+            <img src="1.jpg" alt="Image 1">
+            <img src="2.jpg" alt="Image 2">
+            <img src="3.jpg" alt="Image 3">
+        </div>
+        <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.carousel-images img');
+            const dots = document.getElementById('carouselDots');
+            const carouselImages = document.getElementById('carouselImages');
+            let currentIndex = 0;
+            let isReversed = false;
+            let isLooping = true;
+            let intervalTime = 3000; // 3 seconds
+
+            // 初始化小点
+            images.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+                dots.appendChild(dot);
+            });
+
+            // 设置第一个小点为 active
+            dots.children[0].classList.add('active');
+
+            function updateCarousel() {
+                const offset = -currentIndex * 100;
+                carouselImages.style.transform = `translateX(${isReversed ? -offset : offset}%)`;
+
+                // 更新小点状态
+                Array.from(dots.children).forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            function nextSlide() {
+                if (isReversed) {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                } else {
+                    currentIndex = (currentIndex + 1) % images.length;
+                }
+                updateCarousel();
+            }
+
+            function startCarousel() {
+                if (isLooping) {
+                    setInterval(nextSlide, intervalTime);
+                }
+            }
+
+            // 启动轮播
+            startCarousel();
+
+            // 配置轮播参数
+            function configureCarousel(options) {
+                if (options.reversed !== undefined) {
+                    isReversed = options.reversed;
+                }
+                if (options.looping !== undefined) {
+                    isLooping = options.looping;
+                }
+                if (options.intervalTime !== undefined) {
+                    intervalTime = options.intervalTime;
+                }
+                // 重新启动轮播
+                startCarousel();
+            }
+
+            // 示例配置
+            configureCarousel({
+                reversed: true,
+                looping: true,
+                intervalTime: 1000
+            });
+        });
+    </script>
+</body>
+</html>
