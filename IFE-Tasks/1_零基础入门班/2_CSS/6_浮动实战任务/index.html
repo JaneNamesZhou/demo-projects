@@ -1,60 +1,33 @@
-<!-- 文档类型声明 -->
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Three-Part Layout</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- 头部 -->
+        <header class="header">
+            <h1>网站标题</h1>
+        </header>
 
-<head>
-    <meta charset="utf-8" />
-    <title> </title>
-    <style type="text/css" src="style.css"> </style>
-    <!-- <script src="scripts.js"></script> -->
-</head>
+        <!-- 主要内容区 -->
+        <main class="main-content">
+            <div class="content">
+                <img class='left' src="img.jpg" alt="Image 2">
+                <span class="right" >这是第二部分内容的文字说明。</span>
+            </div>
+            <div class="content"> 
+                <span class='left'>这是第二部分内容的文字说明。</span>
+                <img class="right" src="img.jpg" alt="Image 2">
+            </div>
 
-<body>
-    <div class="header">
+        </main>
 
-    </div>
-
-    <div class="content">
-        <div class="left image">
-            <img src="img.jpg" alt="">
-        </div>
-        <div class="text">
-            <p>
-                水与墨相融，散发出幽远的墨香，像陈年的老酒酝酿着暗涌的思绪；
-                笔与纸相触，挥洒出清扬的文字，淡淡的墨迹岁着宣纸展开，淡到无色，挥毫泼墨间，却将情感一泻千里。
-            </p>
-        </div>
-    </div>
-
-    <div class="content">
-
-        <div class="text">
-            <p>
-                水与墨相融，散发出幽远的墨香，像陈年的老酒酝酿着暗涌的思绪；
-                笔与纸相触，挥洒出清扬的文字，淡淡的墨迹岁着宣纸展开，淡到无色，挥毫泼墨间，却将情感一泻千里。
-            </p>
-        </div>
-        <div class="right image">
-            <img src="img.jpg" alt="">
-        </div>
-    </div>
-
-    <div class="content">
-        <div class="left image">
-            <img src="img.jpg" alt="">
-        </div>
-        <div class="text">
-            <p>
-                水与墨相融，散发出幽远的墨香，像陈年的老酒酝酿着暗涌的思绪；
-                笔与纸相触，挥洒出清扬的文字，淡淡的墨迹岁着宣纸展开，淡到无色，挥毫泼墨间，却将情感一泻千里。
-            </p>
-        </div>
-    </div>
-    </div>
-
-    <div class="footer">
-
-    </div>
-</body>
-
+        <!-- 尾部 -->
+        <footer class="footer">
+            <p>版权所有 © 2023</p>
+        </footer>
+    </body>
 </html>

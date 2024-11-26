@@ -1,18 +1,60 @@
-.image {
-    width: 500px;
-    height: 1000px;
+/* 基本样式 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-div>img {
+/* 头部 */
+.header {
+    height: 100px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.content {
+    height: 200px;
     width: 100%;
-    height: auto; /* 保持宽高比 */
+    background-color:#2E3450 ;
 }
 
-.right {
-    float: right;
-
-}
-
-.left {
+.image-container {
+    height: 200px;
+    width: 40%;
     float: left;
+}
+
+img {
+    height: 200px; /* 固定高度 */
+    width: auto; /* 自适应宽度 */
+    object-fit: cover; /* 保持图片比例 */
+}
+
+span {
+    height: 200px;
+    width: auto;
+    color: white ;
+    float: right;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+/* 尾部 */
+.footer {
+    height: 100px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
