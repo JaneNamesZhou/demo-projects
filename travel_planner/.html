@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
+        <script type="text/javascript"
+            src="https://api.map.baidu.com/api?type=webgl&v=1.0&ak=HRSfG6dGelBpwFZgOGOZHtt42vI08FFp"></script>
+        <title>单个地址解析</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id='container'></div>
+
+        <input id='search' value="北京市海淀区上地10街"
+            onkeypress="handleKeyPress(event)">
+        <button id="search-btn" onclick="search()">搜索</button>
+        <button id="add-btn" onclick="addPoi()">添加</button>
+        <span id="poi-title"> 景点列表 </span>
+        <div id="pois">
+            <ul> <li id="add-poi" onclick="addPoi()">+</li> <!-- 默认放置的加号 -->
+            </ul>
+        </div>
+        <button id="route-btn" onclick="createRoute()">生成路线</button>
+
+        <script src="index.js"></script>
+    </html>
